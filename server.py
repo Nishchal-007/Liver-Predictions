@@ -12,6 +12,10 @@ app.config['SECRET_KEY'] = 'secret-key-goes-here'
 def index():
     return render_template('home.html')
 
+@app.route("/check-up", methods=['GET'])
+def Check_Up():
+    return render_template('check.html')
+
 #JUST DO IT!!!
 if __name__=="__main__":
     app.run(port="9000")
