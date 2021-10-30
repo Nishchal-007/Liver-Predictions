@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <title>Welcome</title>
+    </head>
+    <body class="bg-gray-900">
+        <style>
+            a:hover {
+                cursor: pointer;
+                transition: ease 0.35s;
+                color: black;
+            }
+            a {
+                color: white;
+            }
+        </style>
+        <header class="bg-red-500 body-font">
+            <div
+                class="
+                    container
+                    mx-auto
+                    flex flex-wrap
+                    p-5
+                    flex-col
+                    md:flex-row
+                    items-center
+                "
+            >
+                <div
+                    class="
+                        flex
+                        title-font
+                        font-medium
+                        items-center
+                        text-white
+                        mb-4
+                        md:mb-0
+                    "
+                >
+                    <img
+                        id="logo"
+                        src="{{url_for('static',filename='images/home-liver.jpg') }}"
+                        alt="img"
+                        width="40px"
+                        height="40px"
+                        style="border-radius: 8px"
+                    />
+                    <span class="ml-3 text-xl font-bold text-2xl"
+                        >Liverify</span
+                    >
+                </div>
+                <nav
+                    class="
+                        md:ml-auto
+                        flex flex-wrap
+                        items-center
+                        text-base
+                        justify-center
+                    "
+                >
+                    <a
+                        class="mr-5 hover:text-black text-lg font-semibold"
+                        href="/"
+                        >Home</a
+                    >
+                    <a
+                        class="mr-5 hover:text-black text-lg font-semibold"
+                        href="#"
+                        >Check Up</a
+                    >
+                    <a
+                        class="mr-5 hover:text-black text-lg font-semibold"
+                        href="#"
+                        >Contact</a
+                    >
+                </nav>
+            </div>
+        </header>
+        <div>{% block content %} {% endblock %}</div>
+    </body>
+</html>
